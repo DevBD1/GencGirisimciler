@@ -1,0 +1,1188 @@
+/* ===================================
+   Genç Girişimciler Bilgilendirme Sitesi
+   Warm, Minimalist, Trust-First Design
+   =================================== */
+
+/* CSS Variables */
+:root {
+    /* Colors - Warm & Trustworthy Palette */
+    --bg-primary: #faf8f5;
+    --bg-secondary: #f5f0e8;
+    --bg-card: #ffffff;
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
+    --accent: #d97706;
+    --accent-hover: #b45309;
+    --accent-light: #fef3c7;
+    --success: #059669;
+    --success-light: #d1fae5;
+    --border: #e2e0db;
+    --border-light: #f0ede8;
+    --shadow: rgba(45, 55, 72, 0.08);
+    --shadow-hover: rgba(45, 55, 72, 0.12);
+    
+    /* Twitter/X Brand Color */
+    --twitter-color: #000000;
+    --twitter-hover: #1a1a1a;
+    
+    /* Typography */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-size-base: 16px;
+    --line-height: 1.6;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    
+    /* Transitions */
+    --transition: 0.2s ease;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: var(--font-size-base);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: var(--line-height);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* ===================================
+   Header
+   =================================== */
+.header {
+    background: linear-gradient(135deg, var(--accent-light) 0%, var(--bg-secondary) 100%);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.header__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.header__subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ===================================
+   Problem Section
+   =================================== */
+.problem-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--bg-secondary);
+}
+
+.problem-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    display: flex;
+    gap: var(--spacing-lg);
+    box-shadow: 0 2px 8px var(--shadow);
+    border: 1px solid var(--border-light);
+}
+
+.problem-card__icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: var(--accent-light);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+}
+
+.problem-card__content h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.problem-card__content p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.problem-card__content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Debt Check Links */
+.debt-check {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+}
+
+.debt-check h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.debt-check__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.debt-check__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--accent-light);
+    border-radius: var(--radius-sm);
+    color: var(--accent-hover);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all var(--transition);
+}
+
+.debt-check__link:hover {
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+}
+
+.debt-check__link svg {
+    flex-shrink: 0;
+}
+
+/* ===================================
+   WhatsApp Banner
+   =================================== */
+.whatsapp-banner {
+    padding: var(--spacing-md) 0;
+}
+
+.whatsapp-banner__link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    border-radius: var(--radius-lg);
+    color: white;
+    text-decoration: none;
+    transition: all var(--transition);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-banner__link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    text-decoration: none;
+}
+
+.whatsapp-banner__icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.whatsapp-banner__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.whatsapp-banner__title {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.whatsapp-banner__subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.whatsapp-banner__arrow {
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+    .whatsapp-banner__link {
+        padding: var(--spacing-md);
+    }
+    
+    .whatsapp-banner__icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .whatsapp-banner__icon svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .whatsapp-banner__title {
+        font-size: 1rem;
+    }
+    
+    .whatsapp-banner__subtitle {
+        font-size: 0.8rem;
+    }
+}
+
+/* ===================================
+   Main Content Grid
+   =================================== */
+.main-content {
+    padding: var(--spacing-xl) 0 var(--spacing-2xl);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+}
+
+@media (min-width: 900px) {
+    .content-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Section Title */
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--accent-light);
+}
+
+.section-title svg {
+    color: var(--accent);
+}
+
+/* ===================================
+   Roadmap / Checklist Section
+   =================================== */
+.roadmap-section {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px var(--shadow);
+    border: 1px solid var(--border-light);
+}
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.checklist-item {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-light);
+    transition: all var(--transition);
+}
+
+.checklist-item:hover {
+    border-color: var(--accent-light);
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.checklist-item.completed {
+    background: var(--success-light);
+    border-color: var(--success);
+}
+
+.checklist-item.completed .checklist-item__content h3 {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+/* Custom Checkbox */
+.checklist-item__checkbox {
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.checklist-item__checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition);
+}
+
+.checklist-item__checkbox:hover .checkmark {
+    border-color: var(--accent);
+}
+
+.checklist-item__checkbox input:checked ~ .checkmark {
+    background: var(--success);
+    border-color: var(--success);
+}
+
+.checkmark::after {
+    content: '';
+    display: none;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-bottom: 2px;
+}
+
+.checklist-item__checkbox input:checked ~ .checkmark::after {
+    display: block;
+}
+
+/* Checklist Content */
+.checklist-item__content {
+    flex: 1;
+}
+
+.checklist-item__content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.checklist-item__content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Petition Button */
+.btn-petition {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--bg-card);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-sm);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all var(--transition);
+}
+
+.btn-petition:hover {
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+}
+
+/* ===================================
+   Info Boxes
+   =================================== */
+.info-box {
+    margin: var(--spacing-md) 0;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border-left: 4px solid;
+}
+
+.info-box h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.info-box p {
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.info-box p:last-child {
+    margin-bottom: 0;
+}
+
+.info-box ol {
+    font-size: 0.85rem;
+    margin: var(--spacing-sm) 0;
+    padding-left: var(--spacing-lg);
+}
+
+.info-box ol li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.info-box blockquote {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin: var(--spacing-sm) 0;
+    padding: var(--spacing-sm);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid currentColor;
+}
+
+/* Info Box Variants */
+.info-box--warning {
+    background: #fef3c7;
+    border-color: #f59e0b;
+    color: #92400e;
+}
+
+.info-box--danger {
+    background: #fee2e2;
+    border-color: #ef4444;
+    color: #991b1b;
+}
+
+.info-box--info {
+    background: #e0f2fe;
+    border-color: #0ea5e9;
+    color: #0c4a6e;
+}
+
+.info-box--info a {
+    color: #0369a1;
+}
+
+/* ===================================
+   Post-Steps Information
+   =================================== */
+.post-steps {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--border);
+}
+
+.post-steps h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.post-steps__item {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--accent);
+}
+
+.post-steps__item h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.post-steps__item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.post-steps__item p:last-child {
+    margin-bottom: 0;
+}
+
+.post-steps__highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    background: var(--success-light);
+    border-radius: var(--radius-sm);
+    color: var(--success);
+    font-weight: 500;
+    margin-top: var(--spacing-sm);
+}
+
+.post-steps__highlight svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* ===================================
+   News & Social Section
+   =================================== */
+.news-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+/* Tweet Action */
+.tweet-action {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: 0 2px 8px var(--shadow);
+    border: 1px solid var(--border-light);
+}
+
+.tweet-action p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+.btn-tweet {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--twitter-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.btn-tweet:hover {
+    background: var(--twitter-hover);
+    transform: translateY(-1px);
+}
+
+/* Social Embeds */
+.social-embeds {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px var(--shadow);
+    border: 1px solid var(--border-light);
+}
+
+.social-embeds h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.social-embeds__note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-md);
+}
+
+.social-embed {
+    margin-bottom: var(--spacing-md);
+}
+
+.social-embed:last-child {
+    margin-bottom: 0;
+}
+
+.social-embed__placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.social-embed__placeholder svg {
+    margin-bottom: var(--spacing-sm);
+}
+
+.social-embed__placeholder p {
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.social-embed__link {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.social-embed__loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-lg);
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.social-embed__loading svg {
+    margin-bottom: var(--spacing-sm);
+}
+
+.social-embed__footer {
+    text-align: center;
+    margin-top: var(--spacing-md);
+    font-size: 0.85rem;
+}
+
+.tweet-embed {
+    margin-bottom: var(--spacing-md);
+}
+
+.tweet-embed:last-child {
+    margin-bottom: 0;
+}
+
+#tweets-container {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* Useful Links */
+.useful-links {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px var(--shadow);
+    border: 1px solid var(--border-light);
+}
+
+.useful-links h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.useful-links ul {
+    list-style: none;
+}
+
+.useful-links li {
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.useful-links li:last-child {
+    border-bottom: none;
+}
+
+.useful-links a {
+    display: block;
+    font-size: 0.9rem;
+    padding: var(--spacing-xs) 0;
+}
+
+/* ===================================
+   Footer
+   =================================== */
+.footer {
+    background: var(--bg-secondary);
+    padding: var(--spacing-xl) 0;
+    border-top: 1px solid var(--border);
+}
+
+.footer__content {
+    text-align: center;
+}
+
+.footer__disclaimer {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: var(--accent-light);
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--accent);
+    text-align: left;
+}
+
+.footer__privacy {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer__info {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Modal Privacy Notice */
+.modal__privacy-notice {
+    font-size: 0.8rem;
+    color: var(--success);
+    background: var(--success-light);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    margin: 0;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+.modal__privacy-notice a {
+    color: var(--success);
+    text-decoration: underline;
+}
+
+.modal__privacy-notice a:hover {
+    color: #047857;
+}
+
+.footer__privacy a {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.footer__privacy a:hover {
+    color: var(--accent-hover);
+}
+
+/* ===================================
+   Mobile Responsive Adjustments
+   =================================== */
+@media (max-width: 600px) {
+    :root {
+        --font-size-base: 15px;
+    }
+    
+    .header__title {
+        font-size: 1.5rem;
+    }
+    
+    .problem-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .problem-card__icon {
+        margin: 0 auto;
+    }
+    
+    .debt-check__links {
+        flex-direction: column;
+    }
+    
+    .debt-check__link {
+        justify-content: center;
+    }
+    
+    .checklist-item {
+        flex-direction: column;
+    }
+    
+    .checklist-item__checkbox {
+        align-self: flex-start;
+    }
+    
+    .section-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .btn-tweet,
+    .social-embeds,
+    .tweet-action {
+        display: none;
+    }
+    
+    .content-grid {
+        display: block;
+    }
+    
+    .roadmap-section,
+    .news-section {
+        break-inside: avoid;
+    }
+}
+
+/* ===================================
+   Button Group
+   =================================== */
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-xs);
+}
+
+/* Generator Button */
+.btn-generator {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--success);
+    border: 1px solid var(--success);
+    border-radius: var(--radius-sm);
+    color: white;
+    font-family: var(--font-family);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.btn-generator:hover {
+    background: #047857;
+    border-color: #047857;
+}
+
+/* ===================================
+   Modal Styles
+   =================================== */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: var(--spacing-md);
+    overflow-y: auto;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 600px;
+    margin: var(--spacing-xl) auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    animation: modalSlide 0.3s ease;
+}
+
+.modal--large {
+    max-width: 800px;
+}
+
+@keyframes modalSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--border);
+}
+
+.modal__header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.modal__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: none;
+    border: none;
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.modal__close:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.modal__body {
+    padding: var(--spacing-lg);
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.modal__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-lg);
+    border-top: 1px solid var(--border);
+}
+
+/* ===================================
+   Form Styles
+   =================================== */
+.petition-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+@media (max-width: 500px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    background: var(--bg-card);
+    transition: border-color var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.form-example {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 2px;
+}
+
+/* ===================================
+   Button Styles
+   =================================== */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--accent);
+    border: none;
+    border-radius: var(--radius-sm);
+    color: white;
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.btn-secondary:hover {
+    background: var(--border);
+}
+
+/* ===================================
+   Petition Preview
+   =================================== */
+.petition-preview {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-xl) 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    color: #000;
+    text-align: justify;
+    text-indent: 0;
+}
+
+/* Petition document styling */
+.petition-preview::first-line {
+    font-weight: bold;
+}
+
+/* Print Styles - Only print the petition */
+@media print {
+    /* Hide everything by default */
+    body * {
+        visibility: hidden;
+    }
+    
+    /* Show only the petition result modal and its contents */
+    #petitionResultModal,
+    #petitionResultModal * {
+        visibility: visible;
+    }
+    
+    /* Position the modal for printing */
+    #petitionResultModal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: white;
+        padding: 0;
+    }
+    
+    #petitionResultModal .modal {
+        box-shadow: none;
+        max-width: none;
+        margin: 0;
+        border-radius: 0;
+    }
+    
+    /* Hide modal header, footer, and privacy notice */
+    #petitionResultModal .modal__header,
+    #petitionResultModal .modal__footer,
+    #petitionResultModal .modal__privacy-notice {
+        display: none !important;
+    }
+    
+    #petitionResultModal .modal__body {
+        max-height: none;
+        padding: 20mm;
+        overflow: visible;
+    }
+    
+    #petitionResultModal .petition-preview {
+        border: none;
+        padding: 0;
+        font-size: 12pt;
+        line-height: 1.6;
+    }
+    
+    /* Page setup */
+    @page {
+        size: A4;
+        margin: 20mm;
+    }
+}
