@@ -115,7 +115,7 @@ a:hover {
    Problem Section
    =================================== */
 .problem-section {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-md) 0 var(--spacing-xl);
     background-color: var(--bg-secondary);
 }
 
@@ -159,7 +159,7 @@ a:hover {
 
 /* Debt Check Links */
 .debt-check {
-    margin-top: var(--spacing-lg);
+    margin-top: var(--spacing-lg)/2;
     padding: var(--spacing-lg);
     background: var(--bg-card);
     border-radius: var(--radius-md);
@@ -284,6 +284,61 @@ a:hover {
     .whatsapp-banner__subtitle {
         font-size: 0.8rem;
     }
+}
+
+/* ===================================
+   WhatsApp Sidebar
+   =================================== */
+.whatsapp-sidebar {
+    margin-bottom: -var(--spacing-lg)/2;
+    margin-top: -1.5rem;
+}
+
+.whatsapp-sidebar__link {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    border-radius: var(--radius-md);
+    color: white;
+    text-decoration: none;
+    transition: all var(--transition);
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-sidebar__link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    text-decoration: none;
+}
+
+.whatsapp-sidebar__icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.whatsapp-sidebar__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.whatsapp-sidebar__title {
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.whatsapp-sidebar__subtitle {
+    font-size: 0.75rem;
+    opacity: 0.9;
 }
 
 /* ===================================

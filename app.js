@@ -9,11 +9,9 @@
 const CONFIG = {
     hashtag: 'GençGirişimci',
     storageKey: 'genc-girisimci-steps',
-    tweetTemplate: `Genç Girişimci Bağ-Kur prim desteğim Ocak 2026'da beklenmedik şekilde kesildi ve borçlu duruma düştüm.
+    tweetTemplate: `Devletimizin 12 ay yanındayım sözüne güvenerek yola çıktık, yıla borç sürpriziyle uyandık. Kazanılmış haklar anayasal emanettir; devletimizin sözünde durarak #GençGirişimci'leri mağdur etmeyeceğine inanıyoruz.
 
-Benzer durumda olan girişimcilerin sesi duyulsun!
-
-#GençGirişimci #SGK #BağKur`,
+@RTErdogan @isikhanvedat @csgbakanligi @sgksosyalmedya #Bağkur #SGK`,
 };
 
 // ===================================
