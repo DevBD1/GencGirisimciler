@@ -320,14 +320,14 @@ class PetitionGenerator {
 ${data.sgkCity.toUpperCase()} ${data.sgkDistrict.toUpperCase()} SOSYAL GÜVENLİK MÜDÜRLÜĞÜNE
 
 AD SOYAD : ${data.fullName.toUpperCase()}
-TCKN : ${data.tckn}
+TCKN : 12345678910
 ADRES : ${data.address}
 
 KONU : Hukuka aykırı olarak tahakkuk ettirilen prim borcunun geri alınması ve Genç Girişimci Desteğinin ${endDateFormatted} tarihine kadar devamı hususunda talepleri içerir dilekçedir.
 
 ${data.workCity} ${data.workDistrict}'de ${startDateFormatted} tarihinden beri ${data.profession} mesleğini icra etmekteyim. İlgili şartları sağladığım için ${applicationDateFormatted} Genç Girişimcilerde Kazanç İstisnası programına başvurdum ve ${data.taxOffice} tarafından ${approvalDateFormatted} tarihinde tarafıma tebliğ edilen:
 
-'İlgi dilekçenize istinaden dairemiz kayıtları tetkik edildiğinde; ${data.tckn} T.C kimlik numarası ile ${startDateFormatted} tarihinden itibaren dairemiz mükellefi olduğunuz ve 193 Sayılı Gelir Vergisi Kanunu'nun mükerrer 20. maddesindeki "Genç Girişimcilerde Kazanç İstisnası " şartlarını taşıdığınız görülmüştür.'
+'İlgi dilekçenize istinaden dairemiz kayıtları tetkik edildiğinde; 12345678910 T.C kimlik numarası ile ${startDateFormatted} tarihinden itibaren dairemiz mükellefi olduğunuz ve 193 Sayılı Gelir Vergisi Kanunu'nun mükerrer 20. maddesindeki "Genç Girişimcilerde Kazanç İstisnası " şartlarını taşıdığınız görülmüştür.'
 
 şeklindeki kabul yazısını ${data.sgkDistrict} SGK müdürlüğüne ibraz etmem akabinde ilgili genç girişimci desteğinden yararlanmaya başladım.
 
@@ -365,7 +365,6 @@ ${data.fullName}`;
     getFormData() {
         return {
             fullName: document.getElementById('fullName')?.value || '',
-            tckn: document.getElementById('tckn')?.value || '',
             address: document.getElementById('address')?.value || '',
             sgkCity: document.getElementById('sgkCity')?.value || '',
             sgkDistrict: document.getElementById('sgkDistrict')?.value || '',
@@ -388,7 +387,7 @@ ${data.fullName}`;
      */
     validateForm(data) {
         const requiredFields = [
-            'fullName', 'tckn', 'address', 'sgkCity', 'sgkDistrict',
+            'fullName', 'address', 'sgkCity', 'sgkDistrict',
             'workCity', 'workDistrict', 'profession', 'startDate',
             'applicationDate', 'approvalDate', 'taxOffice', 'debtAmount', 'petitionDate'
         ];
@@ -397,12 +396,6 @@ ${data.fullName}`;
             if (!data[field] || data[field].trim() === '') {
                 return false;
             }
-        }
-        
-        // Validate TCKN (11 digits)
-        if (!/^\d{11}$/.test(data.tckn)) {
-            alert('TC Kimlik No 11 haneli olmalıdır.');
-            return false;
         }
         
         return true;
