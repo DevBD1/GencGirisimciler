@@ -353,10 +353,17 @@
             </p>
             <div class="modal__body">
                 <form id="petitionForm" class="petition-form">
-                    <div class="form-group">
-                        <label for="fullName">Ad Soyad *</label>
-                        <span class="form-example">Örn: Ahmet YILMAZ</span>
-                        <input type="text" id="fullName" name="fullName" required placeholder="Ad Soyad">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Ad Soyad *</label>
+                            <span class="form-example">Örn: Ahmet YILMAZ</span>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Ad Soyad">
+                        </div>
+                        <div class="form-group">
+                            <label for="tckn">TC Kimlik No</label>
+                            <span class="form-example form-example--warning">Dilekçeyi yazıcıdan çıktı almadan önce kendi TCKN'nizi metne ekleyin!</span>
+                            <input type="text" id="tckn" name="tckn" value="12345678910" disabled placeholder="TCKN" class="input-disabled">
+                        </div>
                     </div>
                     
                     <div class="form-group">
