@@ -9,10 +9,33 @@
 const CONFIG = {
     hashtag: 'GençGirişimci',
     storageKey: 'genc-girisimci-steps',
+    legalBannerKey: 'legal-banner-dismissed',
     tweetTemplate: `Devletimizin 12 ay yanındayım sözüne güvenerek yola çıktık, yıla borç sürpriziyle uyandık. Kazanılmış haklar anayasal emanettir; devletimizin sözünde durarak #GençGirişimci'leri mağdur etmeyeceğine inanıyoruz.
 
 @RTErdogan @isikhanvedat @csgbakanligi @sgksosyalmedya #Bağkur #SGK`,
 };
+
+// ===================================
+// Legal Banner Management
+// ===================================
+function closeLegalBanner() {
+    const banner = document.getElementById('legalBanner');
+    if (banner) {
+        banner.classList.add('hidden');
+        localStorage.setItem(CONFIG.legalBannerKey, 'true');
+    }
+}
+
+// Check if banner was previously dismissed
+document.addEventListener('DOMContentLoaded', () => {
+    const wasDismissed = localStorage.getItem(CONFIG.legalBannerKey);
+    if (wasDismissed === 'true') {
+        const banner = document.getElementById('legalBanner');
+        if (banner) {
+            banner.classList.add('hidden');
+        }
+    }
+});
 
 // ===================================
 // Checklist State Management

@@ -89,6 +89,91 @@ a:hover {
 }
 
 /* ===================================
+   Sticky Legal Banner
+   =================================== */
+.legal-banner {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-bottom: 2px solid var(--accent);
+    padding: var(--spacing-sm) 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.legal-banner.hidden {
+    display: none;
+}
+
+.legal-banner .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+}
+
+.legal-banner__content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex: 1;
+}
+
+.legal-banner__content svg {
+    flex-shrink: 0;
+    color: var(--accent);
+}
+
+.legal-banner__content span {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.legal-banner__close {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 50%;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.legal-banner__close:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+    .legal-banner__content span {
+        font-size: 0.8rem;
+    }
+    
+    .legal-banner__close {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* ===================================
    Header
    =================================== */
 .header {

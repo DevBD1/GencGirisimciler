@@ -17,6 +17,26 @@
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
 <body>
+    <!-- Sticky Legal Disclaimer Banner -->
+    <div class="legal-banner" id="legalBanner">
+        <div class="container">
+            <div class="legal-banner__content">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <span><strong>Yasal Uyarı:</strong> Bu site yalnızca bilgilendirme amaçlıdır ve hukuki tavsiye niteliği taşımaz. Somut durumunuz için mutlaka bir avukata danışın.</span>
+            </div>
+            <button class="legal-banner__close" onclick="closeLegalBanner()" aria-label="Uyarıyı kapat">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+
     <!-- Header Section -->
     <header class="header">
         <div class="container">
